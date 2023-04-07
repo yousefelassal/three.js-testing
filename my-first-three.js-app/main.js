@@ -10,7 +10,7 @@ document.body.appendChild( renderer.domElement );
 
 const loader = new GLTFLoader();
 
-loader.load( 'path/to/model.glb', function ( gltf ) {
+loader.load( 'public/scissors.glb', function ( gltf ) {
 
 	scene.add( gltf.scene );
 
@@ -32,6 +32,8 @@ function animate() {
 
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
+	gltf.rotation.x += 0.01;
+	gltf.rotation.y += 0.01;
 
 	renderer.render( scene, camera );
 }
